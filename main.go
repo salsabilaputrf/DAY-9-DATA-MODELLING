@@ -33,15 +33,7 @@ type dataProject struct {
 }
 
 var Projects = []dataProject{
-	/*
-	{
-		ProjectName:  "Dumbways Mobile Apps",
-		StartDate: "2022-12-02",
-		EndDate:    "2022-12-29",
-		Description:   "Aplikasi mobile dari dumbways",
-		Technologies:   []string{"nodeJs", "reactJs", "nextJs", "typeScript"},
-	},
-	*/
+	
 }
 
 func main(){
@@ -83,7 +75,6 @@ func home(w http.ResponseWriter, r *http.Request){
 		fmt.Println(err.Error())
 		return 
 	}
-	defer rows.Close()
 	
 	for rows.Next() {
 		var each = dataProject{}
